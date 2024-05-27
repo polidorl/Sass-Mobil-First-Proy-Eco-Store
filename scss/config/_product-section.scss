@@ -1,0 +1,87 @@
+.product-section {
+    width: auto;
+    min-width: 320px;
+    .skincare {
+        width: auto;
+        .product-section--title {
+            @include widthHeight(167px, 54px);
+            padding: 20px 0px 80px 28px;
+            font-family: Montserrat;
+            @include fontSWlineH(22px,500,27px);
+            color:$primary-text-color;
+        }
+        .card-section {
+            @include widthHeight(auto, auto);
+            display: flex;
+            padding-bottom: 20px;
+            gap: 30px;
+
+            overflow-x: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x proximity;
+            .product-card {
+                scroll-snap-align: center;
+                @include widthHeight(182px, 270px);
+                padding: 0px 20px 20px 20px;
+                background-color: $secondary-color;
+                border-radius: 5px;
+                .icon {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-top: 8px;
+                    padding-right: 8px;
+                }
+                .product-image {
+                    @include widthHeight(auto, auto);
+                    @include flexCenter(row,center,center);
+                    img {
+                        @include widthHeight(145px, 175px);
+                        object-fit: cover;
+                        border-radius: 4px;
+                    }
+                }
+                .product-description {
+                    padding-top: 11px;
+                    h3 {
+                        @include fontSWlineH(14px,600,18px);
+                        font-family: $font-stack;
+                    }
+                    p {
+                        @include fontSWlineH(11px,400,11px);
+                        font-family: $font-stack;
+                    }
+                }
+            }
+        }
+    }
+
+    .furniture {
+        @extend .skincare;
+
+        .card-section {
+            .product-card {
+                background-color: $tertiary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+// @media (min-width: 768px) {
+//     .product-section {
+//         .skincare {
+//             .product-section--title {
+//                 width: auto;
+//                 font-size: 35px;
+//                 line-height: 65px;
+//                 margin-left: 60px;
+//             }
+//             .card-section {
+//                 justify-content: center;
+//                 align-items: center;
+//                 flex-wrap: wrap;
+//             }
+//         }
+//     }
+// }

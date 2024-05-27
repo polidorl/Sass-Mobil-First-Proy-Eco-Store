@@ -1,0 +1,88 @@
+.info-section {
+
+    .about-us {
+        width: auto;
+        .about-us--title {
+            height: 29px;
+            font-family: $font-stack;
+            font-size: 22px;
+            font-weight: 500;
+            color:$primary-text-color;
+            margin: 80px 0 80px 30px;
+        }
+        .mission-section--figure {
+            height: 496px;
+            margin: 20px 0 20px 113px;
+            padding-right: 20px;
+            text-align: justify;
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+            figcaption {
+                @include widthHeight(auto,auto);
+                @include fontSWlineH(14px,500,18px);
+                color: $primary-text-color;
+            }
+        }
+    }
+
+    .gallery {
+        width: auto;
+        max-width: 1000px;
+        padding: 60px;
+        margin: 0 auto;
+        .gallery--title {
+            @include widthHeight(175px,29px);
+            @include fontSWlineH(22px,500,28.6px);
+            margin-bottom: 65px;
+            color: $primary-text-color;
+        }
+
+        .gallery_container {
+            width: auto;
+            position: relative;
+            @include flexCenter(column,center, center);
+            gap: 40px;
+            img {
+                @include widthHeight(296px,297.5px);
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .location {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 60px 0;
+        color: $text-color;
+        .location--title {
+            @include widthHeight(170px, 29px);
+            @include fontSWlineH(22px,500, 28.6px);
+            margin-bottom: 65px;
+            color: $primary-text-color;
+        }
+        .location--container {
+            display: flex;
+            flex-wrap: wrap;
+            .location__map {
+                flex: 400px;
+                .location-img {
+                    @include widthHeight(100%,100%);
+                    object-fit: cover;
+                }
+                h3 {
+                    // font-family: $font-stack;
+                    @include fontSWlineH(20px,400,26px);
+                    margin-top: 44px;
+                }
+                figcaption {
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

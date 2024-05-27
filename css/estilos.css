@@ -1,0 +1,460 @@
+@import url("https://cdn-uicons.flaticon.com/2.2.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(255, 239, 231);
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #7C6A0A;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+  width: auto;
+  padding: 10px 12px;
+}
+nav p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #7C6A0A;
+}
+nav .checkbox,
+nav .burger {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  color: #7C6A0A;
+}
+nav .burger {
+  pointer-events: none;
+  font-size: 32px;
+}
+nav .checkbox {
+  opacity: 0;
+}
+nav .fi-br-cross {
+  display: none;
+}
+nav .checkbox:checked ~ .fi-br-menu-burger {
+  display: none;
+}
+nav .checkbox:checked ~ .fi-br-cross {
+  display: block;
+}
+nav .icons {
+  width: unset;
+  padding-right: 10px;
+  position: absolute;
+  top: -110px;
+  z-index: -1;
+  right: 0;
+  transition: 250ms;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+  display: block;
+  padding: 5px;
+}
+nav .icons button:hover {
+  background-color: #efe6b3;
+}
+nav .checkbox:checked ~ .icons {
+  top: 40px;
+  padding-right: 10px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 54px 27px 0;
+}
+article .image-section img {
+  height: 362px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+article .impact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 26px;
+}
+article .impact-section h1 {
+  color: #7C6A0A;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 37px;
+}
+article .impact-section .impact-section--parraf {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+article .impact-section button {
+  background: none;
+  border-style: none;
+  width: 150px;
+  height: 42px;
+  background-color: #FA9500;
+  border-radius: 20px;
+  margin: 30px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  color: white;
+}
+
+.product-section {
+  width: auto;
+  min-width: 320px;
+}
+.product-section .skincare, .product-section .furniture {
+  width: auto;
+}
+.product-section .skincare .product-section--title, .product-section .furniture .product-section--title {
+  width: 167px;
+  height: 54px;
+  padding: 20px 0px 80px 28px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #7C6A0A;
+}
+.product-section .skincare .card-section, .product-section .furniture .card-section {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding-bottom: 20px;
+  gap: 30px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.product-section .skincare .card-section .product-card, .product-section .furniture .card-section .product-card {
+  scroll-snap-align: center;
+  width: 182px;
+  height: 270px;
+  padding: 0px 20px 20px 20px;
+  background-color: rgb(255, 218, 198);
+  border-radius: 5px;
+}
+.product-section .skincare .card-section .product-card .icon, .product-section .furniture .card-section .product-card .icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+.product-section .skincare .card-section .product-card .product-image, .product-section .furniture .card-section .product-card .product-image {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.product-section .skincare .card-section .product-card .product-image img, .product-section .furniture .card-section .product-card .product-image img {
+  width: 145px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.product-section .skincare .card-section .product-card .product-description, .product-section .furniture .card-section .product-card .product-description {
+  padding-top: 11px;
+}
+.product-section .skincare .card-section .product-card .product-description h3, .product-section .furniture .card-section .product-card .product-description h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.product-section .skincare .card-section .product-card .product-description p, .product-section .furniture .card-section .product-card .product-description p {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 11px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.product-section .furniture .card-section .product-card {
+  background-color: #BABD8D;
+  color: white;
+}
+
+.info-section .about-us {
+  width: auto;
+}
+.info-section .about-us .about-us--title {
+  height: 29px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #7C6A0A;
+  margin: 80px 0 80px 30px;
+}
+.info-section .about-us .mission-section--figure {
+  height: 496px;
+  margin: 20px 0 20px 113px;
+  padding-right: 20px;
+  text-align: justify;
+}
+.info-section .about-us .mission-section--figure img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.info-section .about-us .mission-section--figure figcaption {
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #7C6A0A;
+}
+.info-section .gallery {
+  width: auto;
+  max-width: 1000px;
+  padding: 60px;
+  margin: 0 auto;
+}
+.info-section .gallery .gallery--title {
+  width: 175px;
+  height: 29px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28.6px;
+  margin-bottom: 65px;
+  color: #7C6A0A;
+}
+.info-section .gallery .gallery_container {
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.info-section .gallery .gallery_container img {
+  width: 296px;
+  height: 297.5px;
+  border-radius: 12px;
+}
+.info-section .location {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: #E86424;
+}
+.info-section .location .location--title {
+  width: 170px;
+  height: 29px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28.6px;
+  margin-bottom: 65px;
+  color: #7C6A0A;
+}
+.info-section .location .location--container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.info-section .location .location--container .location__map {
+  flex: 400px;
+}
+.info-section .location .location--container .location__map .location-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.info-section .location .location--container .location__map h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 44px;
+}
+.info-section .location .location--container .location__map figcaption {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+footer {
+  background-color: #FA9500;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+footer section {
+  width: 50%;
+  display: flex;
+}
+footer .footer-nav {
+  flex-direction: column;
+}
+footer .footer-nav h3 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #FFFFFF;
+  padding-right: 22px;
+}
+footer .footer-nav ul {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+footer .footer-nav ul li {
+  margin: 10px 0;
+}
+footer .footer-nav ul li .footer-link {
+  color: #FFFFFF;
+}
+footer .footer-social {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 15px;
+}
+footer .footer-social .footer-media .footer-img {
+  width: 26px;
+  height: 26px;
+}
+
+@media (min-width: 768px) {
+  nav {
+    height: 80px;
+  }
+  nav .checkbox,
+  nav .fi-br-menu-burger,
+  nav .fi-br-cross {
+    display: none;
+  }
+  nav .checkbox:checked ~ .fi-br-cross {
+    display: none;
+  }
+  nav p {
+    padding-top: 20px;
+    line-height: 10px;
+  }
+  nav .icons {
+    display: flex;
+    width: unset;
+    gap: 15px;
+    top: 20px;
+    z-index: 1;
+  }
+  article {
+    flex-direction: row;
+    padding: 70px 45px 0;
+    width: 100%;
+  }
+  article .impact-section {
+    order: 1;
+    width: 100%;
+    padding-top: 30px;
+    gap: 25px;
+  }
+  article .impact-section h1 {
+    font-size: 30px;
+  }
+  article .impact-section .impact-section--parraf {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  article .impact-section button {
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 35px;
+    margin-right: 40px;
+  }
+  article .image-section {
+    order: 2;
+  }
+  article .image-section img {
+    width: 414px;
+    height: 550px;
+  }
+  .product-section .skincare .product-section--title, .product-section .furniture .product-section--title {
+    width: auto;
+    font-size: 35px;
+    line-height: 65px;
+    margin-left: 60px;
+  }
+  .product-section .skincare .card-section, .product-section .furniture .card-section {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .info-section .about-us .about-us--title {
+    width: auto;
+  }
+  .info-section .about-us .mission-section--figure {
+    display: flex;
+    height: auto;
+  }
+  .info-section .about-us .mission-section--figure img {
+    height: 158px;
+    object-fit: contain;
+  }
+  .info-section .gallery .gallery--title {
+    height: 65px;
+    line-height: 65px;
+    padding-bottom: 60px;
+  }
+  .info-section .gallery .gallery_container {
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  .info-section .gallery .gallery_container img {
+    width: auto;
+  }
+  .info-section .location .location--title {
+    height: 65px;
+    line-height: 65px;
+    padding-bottom: 60px;
+  }
+  .info-section .location .location--container {
+    height: 500px;
+  }
+  .info-section .location .location--container .location-map {
+    height: 480px;
+    flex: 400px;
+  }
+  .info-section .location .location--container .location-map .location-img {
+    object-fit: cover;
+  }
+  footer .footer-social {
+    justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+  }
+}/*# sourceMappingURL=estilos.css.map */

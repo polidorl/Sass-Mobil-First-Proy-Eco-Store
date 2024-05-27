@@ -1,0 +1,17 @@
+
+@mixin flexCenter($fdirection,$jcontent,$alignitems){
+    display:flex;
+    flex-direction:$fdirection;
+    justify-content:$jcontent;
+    align-items:$alignitems;
+}
+
+@mixin widthHeight($width,$height){
+    width: $width;
+    height: $height;
+}
+@mixin fontSWlineH($fSize,$fWeight,$lHeight){
+    font-size: $fSize;
+    font-weight: $fWeight;
+    line-height: $lHeight;
+}

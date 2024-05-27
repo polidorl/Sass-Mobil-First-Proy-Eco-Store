@@ -1,0 +1,38 @@
+article {
+    @include flexCenter(column,space-between,center);
+   
+    padding: 54px 27px 0;
+    .image-section {
+        img {
+            height: 362px;
+            margin:0 auto;  
+            border-radius: 20px;
+        }
+    }
+
+    .impact-section {
+        @include flexCenter(column,space-evenly,center);
+        padding-top: 30px;
+        padding-bottom: 26px;
+
+        h1 {
+            color: #7C6A0A;
+            @include fontSWlineH(28px,600,37px);
+        }
+
+        .impact-section--parraf {
+            @include fontSWlineH(12px,400,16px);
+        }
+
+        button {
+            background: none;
+            border-style: none;
+            @include widthHeight(150px,42px);
+            background-color: $quaternary-color;
+            border-radius: 20px;
+            margin: 30px 0;
+            @include fontSWlineH(14px,700,17px);
+            color: white;
+        }
+    }
+}

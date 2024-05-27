@@ -1,0 +1,5 @@
+@mixin modoresponsive ($valor) {
+    @media(min-width: $valor){
+        @content;
+    }
+}
